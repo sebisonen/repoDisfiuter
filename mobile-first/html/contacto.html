@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DisFiuter - Genderless Clothing</title>
+	<link rel="stylesheet" href="../css/disfiuter.css">
+</head>
+
+<body>
+	<nav id= "navbarSecundaria">
+		<h1 class="contenedorLogo">
+			<a class="logoSecundario correctorVinculos" href="index.html"> DIS FIUTER</a>
+		</h1>
+		<ul class="navbarLayout">
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="index.html">INICIO</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="productos.html">PRODUCTOS</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="informacion.html">INFORMACION</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="encargos.html">ENCARGOS</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="contacto.html">CONTACTO</a></li>
+		</ul>
+	</nav>
+
+	<div class="subindiceMargenes">
+		<h2 class="subindice__actual--tipografia"><a class=".correctorVinculos subindice__inicio--tipografia" href="index.html">Inicio</a>/Contacto</h2>
+	</div>
+
+	<main class="formulario">
+		<form action="envio.php" mehtod="post">
+			<fieldset>
+				<legend>Nombre completo</legend>
+				<label for="nombre">Nombre</label>
+				<input type="text" id="nombre" placeholder="Bruno"name="nombre" id="nombre">
+				<br>
+				<label for="apellido">Apellido</label>
+				<input type="text" id="apellido" placeholder="Diaz" name="apellido" id="apellido">
+			</fieldset>
+			<fieldset>
+				<legend>Contacto</legend>
+				<label for="celular">Celular</label>
+				<input type="tel" placeholder="(+54)1122334455" name="celular" id="celular">
+				<br>
+				<label for="email">Email</label>
+				<input type="email"placeholder="acava@tumail.com" name=email id="email">
+			</fieldset>
+			<fieldset>
+				<legend>Dejanos un mensaje</legend>
+				<label for="menaje"></label> <br>
+				<textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+			</fieldset>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Cancelar">
+		</form>
+	</main>	
+	
+	<footer id="footer" class="footerBackground">
+		<div class= "footer">
+			
+					<div class="footer__categorias--display">
+				<h2 class= "footer__titulos--tipografia">Navegación</h2>
+				<div class= "footer__contenido--display">
+					<p><a class="footerContenido" href="index.html">Inicio</a></p>
+					<p><a class="footerContenido" href="productos.html">Productos</a></p>
+					<p><a class="footerContenido" href="informacion.html">Informacion</a></p>
+					<p><a class="footerContenido" href="encargos.html">Encargos</a></p>
+					<p><a class="footerContenido" href="contacto.html">Contacto</a></p>
+				</div>
+			</div>
+			
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Contacto</h2>
+				<div class= "footer__contenido--display">
+					<p class="">acavaelmail@mimail.com.ar</p>
+					<p class="">Calle Falsa 123</p>
+				</div>
+			</div>
+			
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Medios de pago</h2>
+				<div class= "footer__contenido--display">
+					<p class="">6 y 12 cuotas sin interés</p>
+					<p class="">Mercado Pago</p>
+					<p class="">Tarjetas de crédito y débito</p>
+					<p class="">Transferencia bancaria</p>	
+				</div> 
+			</div>
+
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Formas de envío</h2>
+				<div class= "footer__contenido--display">
+					<p class="">Correo Argentino</p>
+					<p class="">Retiro por showroom</p>	
+				</div>
+			</div>
+
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Redes sociales</h2>
+				<div class= "footer__contenido--display">
+					<p ><a class="footerContenido" href="https://instagram.com/DisFiuter"><img src="../fotos/icono-instagram.png" alt="icono instagram" target="_blank">DisFiuter</a></p>	
+				</div>
+			</div>	
+	</footer>	
+</body>
+</html>

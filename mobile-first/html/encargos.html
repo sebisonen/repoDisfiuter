@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>DisFiuter - Genderless Clothing</title>
+	<link rel="stylesheet" href="../css/disfiuter.css">
+</head>
+<body id="encargos">
+
+	<nav id= "navbarSecundaria">
+		<h1 class="contenedorLogo">
+			<a class="logoSecundario correctorVinculos" href="index.html"> DIS FIUTER</a>
+		</h1>
+		<ul class="navbarLayout">
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="index.html">INICIO</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="productos.html">PRODUCTOS</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="informacion.html">INFORMACION</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="encargos.html">ENCARGOS</a></li>
+			<li class="navbarLayout"><a class= "contenidoBotonera" href="contacto.html">CONTACTO</a></li>
+		</ul>
+	</nav>
+
+	<div class="subindiceMargenes">
+		<h2 class="subindice__actual--tipografia"><a class=".correctorVinculos subindice__inicio--tipografia" href="index.html">Inicio</a>/Encargos</h2>
+	</div>
+
+	<main class="formulario">
+		<h2>Encarga acá!</h2>
+		<p>El tiempo de confección de la prenda es de 10 a 15 días desde el pago de la seña</p>
+		<form action="envio.php" mehtod="post">
+			<fieldset>
+					<legend>Nombre completo</legend>
+					<label for="nombre">Nombre</label>
+					<input type="text" id="nombre" placeholder="Bruno"name="nombre" id="nombre">
+				<br>
+				<label for="apellido">Apellido</label>
+				<input type="text" id="apellido" placeholder="Diaz" name="apellido" id="apellido">
+			</fieldset>
+			<fieldset>
+				<legend>Contacto</legend>
+				<label for="celular">Celular</label>
+				<input type="tel" placeholder="(+54)1122334455" name="celular" id="celular">
+				<br>
+				<label for="email">Email</label>
+				<input type="email"placeholder="acava@tumail.com" name=email id="email">
+			</fieldset>
+			<fieldset>
+				<legend>Productos</legend>
+				<label for="body waterdragon">Body WaterDragon</label>
+				<input type="checkbox" name="body waterdragon" id="body waterDragon" value="body waterdragon">
+				<br>
+				<label for="talle body waterdragon">Talle</label>
+				<select name="talle body waterdragon" id="talle body waterdragon">
+					<option value=""></option>
+					<option value="talle 1">1</option>
+					<option value="talle 2">2</option>
+					<option value="talle 3">3</option>
+					<option value="talle 4">4</option>
+					<option value="talle 5">5</option>
+				</select>
+				<label for="cantidad body waterdragon">Cantidad</label>
+				<select name="catidad body waterdragon" id="cantidad body waterdragon">
+					<option value=""></option>
+					<option value="cantidad 1">1</option>
+					<option value="cantidad 2">2</option>
+					<option value="cantidad 3">3</option>
+					<option value="cantidad 4">4</option>
+					<option value="cantidad 5">5</option>
+				</select>
+				<br>
+				<label for="top moondragon">Top MoonDragon</label>
+				<input type="checkbox" name="top moondragon" id="top moondragon" value="top moondragon">
+				<br>
+				<label for="talle top moondragon">Talle</label>
+				<select name="talle top moondragon" id="talle top moondragon">
+					<option value=""></option>
+					<option value="talle 1">1</option>
+					<option value="talle 2">2</option>
+					<option value="talle 3">3</option>
+					<option value="talle 4">4</option>
+					<option value="talle 5">5</option>
+				</select>
+				<label for="cantidad top moondragon">Cantidad</label>
+				<select name="catidad top moondragon" id="cantidad top moondragon">
+					<option value=""></option>
+					<option value="cantidad 1">1</option>
+					<option value="cantidad 2">2</option>
+					<option value="cantidad 3">3</option>
+					<option value="cantidad 4">4</option>
+					<option value="cantidad 5">5</option>
+				</select>
+				<br>
+				<label for="polo sunchaser">Polo Sunchaser</label>
+				<input type="checkbox" name="polo sunchaser" id="polo sunchaser" value="polo sunchaser">
+				<br>
+				<label for="talle polo sunchaser">Talle</label>
+				<select name="talle polo sunchaser" id="talle polo sunchaser">
+					<option value=""></option>
+					<option value="talle 1">1</option>
+					<option value="talle 2">2</option>
+					<option value="talle 3">3</option>
+					<option value="talle 4">4</option>
+					<option value="talle 5">5</option>
+				</select>
+				<label for="cantidad polo sunchaser">Cantidad</label>
+				<select name="catidad polo sunchaser" id="cantidad polo sunchaser">
+					<option value=""></option>				
+					<option value="cantidad 1">1</option>
+					<option value="cantidad 2">2</option>
+					<option value="cantidad 3">3</option>
+					<option value="cantidad 4">4</option>
+					<option value="cantidad 5">5</option>
+				</select>						
+			</fieldset>
+			<fieldset>
+				<legend>Envío</legend>
+					<label for="envio">Retiro por local</label>
+					<input type="radio" name="envio" id="local" value="local">
+					<label for="envio">Envio a domicilio</label>
+					<input type="radio" name="envio" id="domicilio" value="local">
+					<br>
+					<select name="localidad" id="localidad">
+						<option value="caba">CABA</option>
+						<option value="baires">Buenos Aires</option>
+						<option value="interior">Interior</option>
+					</select>
+					<label for="direccion">Direccion</label>
+					<input type="text" name="direccion" id="direccion" placeholder="Calle y numero">
+					<label for="piso">Piso/timbre</label>
+					<input type="text" name=piso id=piso placeholder="4b">	 
+			</fieldset>
+			<fieldset>
+				<legend>Dejanos un mensaje (opcional)</legend>
+					<label for="menaje"></label> <br>
+					<textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+			</fieldset>
+			<input type="submit" value="Enviar">
+			<input type="reset" value="Cancelar">
+		</form>
+	</main>	
+
+	<footer id="footer" class="footerBackground">
+		<div class= "footer">
+			
+					<div class="footer__categorias--display">
+				<h2 class= "footer__titulos--tipografia">Navegación</h2>
+				<div class= "footer__contenido--display">
+					<p><a class="footerContenido" href="index.html">Inicio</a></p>
+					<p><a class="footerContenido" href="productos.html">Productos</a></p>
+					<p><a class="footerContenido" href="informacion.html">Informacion</a></p>
+					<p><a class="footerContenido" href="encargos.html">Encargos</a></p>
+					<p><a class="footerContenido" href="contacto.html">Contacto</a></p>
+				</div>
+			</div>
+			
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Contacto</h2>
+				<div class= "footer__contenido--display">
+					<p class="">acavaelmail@mimail.com.ar</p>
+					<p class="">Calle Falsa 123</p>
+				</div>
+			</div>
+			
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Medios de pago</h2>
+				<div class= "footer__contenido--display">
+					<p class="">6 y 12 cuotas sin interés</p>
+					<p class="">Mercado Pago</p>
+					<p class="">Tarjetas de crédito y débito</p>
+					<p class="">Transferencia bancaria</p>	
+				</div> 
+			</div>
+
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Formas de envío</h2>
+				<div class= "footer__contenido--display">
+					<p class="">Correo Argentino</p>
+					<p class="">Retiro por showroom</p>	
+				</div>
+			</div>
+
+			<div class="footer__categorias--display">
+				<h2 class="footer__titulos--tipografia">Redes sociales</h2>
+				<div class= "footer__contenido--display">
+					<p ><a class="footerContenido" href="https://instagram.com/DisFiuter"><img src="../fotos/icono-instagram.png" alt="icono instagram" target="_blank">DisFiuter</a></p>	
+				</div>
+			</div>	
+	</footer>
+
+	
+</body>
+</html>
