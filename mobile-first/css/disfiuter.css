@@ -10,6 +10,30 @@
 	
 }
 
+a{
+	margin: 0;
+	padding: 0;
+
+}
+#footer a:hover{
+	color: #ffffff;
+}
+#coleccion a:hover{
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.borde{
+	border-style: groove;
+}
+
+
+
+/* #informacion nav div{
+ 	border-style: d;
+ } 
+#informacion nav div ul{
+	border-style: solid;*/
+}
 .correctorVinculos{
 	text-decoration: none;
 }
@@ -24,7 +48,29 @@
 		display: flex;
 		flex-direction: column;
 		/*border-style: solid;*/
-	
+
+
+	}
+
+	.navbar{
+		display: block;
+	}
+
+	.bg-nav{
+		background: linear-gradient(180deg, #FFBCD4 0%, rgba(255, 188, 212, 0) 100%);
+		margin: 0;
+
+	}
+
+
+	.bg-nav-index{
+		background-image: url(../fotos/slider.jpg);
+		background-color: none;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 110vh;
+		width: 100%;
 
 	}
 	.logoSecundario{
@@ -157,6 +203,11 @@
 					line-height: 80px;
 
 				}
+				#index .contenidoBotonera{
+					font-weight: 350;
+					color: rgba(0, 0, 0, 0.9);
+					font-size: 20px;
+				}
 
 				.contenidoBotonera:hover{
 					color: rgba(0, 0, 0, 0.9);
@@ -166,6 +217,18 @@
 					line-height: 80px;
 					box-sizing: border-box;
 				}
+				#index .contenidoBotonera:hover{
+					color: navajowhite;
+					transition: 1s;
+					/*letter-spacing: -0.05em;*/
+					font-weight: 400;
+					font-size: 20px;
+					line-height: 80px;
+					box-sizing: border-box;
+
+				}
+
+
 
 		.slider {
 
@@ -222,20 +285,20 @@
 
 	
 	#seccionStock {
-		width:  50%;
-		height:  100%;
-		/*margin: 182px 0px;*/
-/*		display: flex;
-		flex-direction: row;*/
+		width:  100%;
+		height:  85vh;
+		margin: 10% 0;
+		display: flex;
+		flex-direction: row;
 		background-color: #FFBCD4;
 		box-sizing: border-box;
-		border-style: solid;
+
 	}
 
 		.contenedorSeccionStock {
 			width: 100%;
-			height: 85vh;
-			margin: 10% 0;
+			height: 100%;
+			
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -490,13 +553,16 @@
 			line-height: 30px;
 			color: #FFFFFF;
 			padding: 10% 0;
-			box-sizing: border-box;		
+			box-sizing: border-box;
+			width: auto;		
 		}	
 		.footerContenido{
 			text-decoration: none;
 			color: #FFFFFF;
 			font-size: 15px;
-			
+			margin: 0;
+			padding: 0;
+
 			
 		}
 
@@ -906,7 +972,26 @@
 				width: 50%;
 				
 		}
-}		
+}
+
+
+
+.tamañoLogoBootstrap{
+	height: auto;
+	width: 200px;
+
+}
+.botoneraBootstrap{
+	display: grid;
+}
+
+@media (min-width: 280px) and (max-width: 576px){
+	.tamañoLogoBootstrap{
+		width: 100px;
+		
+
+	}
+}
 
 		
 
