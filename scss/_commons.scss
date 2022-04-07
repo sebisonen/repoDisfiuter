@@ -1,0 +1,36 @@
+*{	
+	font-family: 'oswald', sans-serif;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	
+}
+
+a{
+	margin: 0;
+	padding: 0;
+
+}
+.correctorVinculos{
+	text-decoration: none;
+}
+
+$pinkDisfiuter: #FFBCD4;
+$blueDisfiuter: #252A54;
+
+// para titulos, descripciones e informacion
+$blackText: rgba(0, 0, 0, 0.8);
+
+// para leyendas de producto
+$blackProduct: rgba(0, 0, 0, 0.6);
+
+// textos blancos
+$whiteText: #FFFFFF;
+
+
+
+.borde{
+	border-style: groove;
+}
+
+
