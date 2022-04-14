@@ -29,8 +29,7 @@
 		.footer{
 			width: 90%;
 			height: 100%;
-			display: flex;
-			flex-direction: row;
+			@include flex-row();
 			margin: 0 5%;
 			box-sizing: border-box;
 		}
@@ -39,7 +38,6 @@
 			flex-direction: column;
 			align-content: center;
 			width: 20%;
-
 			box-sizing: border-box;
 			margin: 15% 0;
 			padding-left: 5%;
@@ -58,12 +56,13 @@
 		.footer__contenido--display{
 			display: flex;
 			flex-direction: column;
-			font-family: 'Oswald';
 
+			font-family: 'Oswald';
 			font-weight: 300;
 			font-size: 16px;
 			line-height: 30px;
-			color: $whiteText;
+			color: map-get($map:$colores, $key:'terciario');
+			
 			padding: 10% 0;
 			box-sizing: border-box;
 			width: auto;		
@@ -72,8 +71,5 @@
 			text-decoration: none;
 			color: $whiteText;
 			font-size: 15px;
-			margin: 0;
-			padding: 0;
-
-			
+			@include margin-reset();
 		}

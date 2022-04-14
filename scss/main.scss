@@ -8,7 +8,7 @@
 /*cosas generales */
 
 #footer a:hover{
-	color: #ffffff;
+	color: map-get($map:$colores, $key:'terciario');
 }
 #coleccion a:hover{
 	color: $blackText;
@@ -31,9 +31,8 @@
 
 	height: auto;
 	overflow-x: none;
-	margin: 0px;
-	padding: 0px;
-	background-color: $pinkDisfiuter;
+	@include margin-reset();
+	background-color: map-get($map:$colores, $key:'primario');
 	width: 100%;
 }
 
@@ -59,9 +58,8 @@
 		width:  100%;
 		height:  85vh;
 		margin: 10% 0;
-		display: flex;
-		flex-direction: row;
-		background-color: #FFBCD4;
+		@include flex-row();
+		background-color: map-get($map:$colores, $key:'primario');
 		box-sizing: border-box;
 
 	}
@@ -76,19 +74,7 @@
 
 		}	
 
-		.contenidoSeccionStock {
-			font-family: Bungee Shade;
-			font-size: 50px;
-			font-style: normal;
-			font-weight: 400;
-			line-height: 60px;
-			letter-spacing: -0.05em;
-			text-align: center;
-			cursor: pointer;
-
-			/*margin: 50%;*/
-			
-		}
+		
 
 		.colorStock {
 			color: $blackText;
@@ -120,10 +106,7 @@
 	#coleccion{
 		padding: 0 15%;
 		box-sizing: border-box;
-
-		display: flex;
-		flex-direction: column;
-		align-content: center;
+		@include flex-column();
 	}
 
 		.coleccion__titulo--tipografia {
@@ -132,8 +115,9 @@
 			line-height: 31px;
 			text-align: center;
 			color: $blackText;
-
 		}
+		
+
 
 		.coleccion__descripcion--tipografia {
 			font-family: Oswald;
@@ -148,8 +132,7 @@
 
 
 		.coleccionLayout{
-			display: flex;
-			flex-direction: row;
+			@include flex-row();
 			height: auto;
 			box-sizing: border-box;
 
@@ -159,6 +142,11 @@
 			width: 33%;
 			padding: 4.17%;
 			box-sizing: border-box;
+			&:hover{
+					transition: all 1s;
+					border: none;
+					padding: 0;
+			}
 		}
 
 /*CLASES REPETIDAS EN HOJA PRODUCTOS*/
@@ -182,31 +170,14 @@
 			height: 315px;
 			object-fit: cover;
 		}
-		.productoContenedor:hover{
-			/*transform: scale(1.1);*/
-			transition: all 1s;
-			border: none;
-			padding: 0;
-		}
+		
 		#catalogo{
 			margin: 0 0 15% 0;
 		}
 
 
 
-		.producto__descripcion--tipografia{
-			font-family:'Oswald';
-			font-family: Oswald;
-			font-style: normal;
-			font-weight: 300;
-			font-size: 18px;
-			line-height: 25px;
-			align-items: center;
-			text-align: center;
-			letter-spacing: -0.05em;
-			color: $blackProduct;
-
-		}
+	
 
 
 
@@ -240,9 +211,8 @@
 	width: 100%;
 	height: auto;
 	overflow-x: none;
-	margin: 0px;
-	padding: 0px;
-	background-color: #FFFFFF;
+	@include margin-reset();
+	background-color: map-get($map:$colores, $key:'terciario');
 }
 		.subindiceMargenes{
 			width: 66.67%;
@@ -295,16 +265,6 @@
 
 
 
-#informacion main h2{
-	font-family: Ultra;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 26px;
-	line-height: 25px;
-	letter-spacing: -0.05em;
-
-	color: $blackText;
-}
 
 	#informacion main article, ul{
 		margin: 30px 16.665%;
@@ -325,13 +285,19 @@
 
 
 
-	.formulario form, .formulario h2, .formulario p{
+	.formulario form, .formulario h2, .formulario p, .formulario h1{
 		margin: 30px 16.665%;
+
 	}
+
+
+
+	
 
 	fieldset{
 		margin: 10px 0;
 		border-radius: 10px;
+		
 	}
 
 
@@ -384,7 +350,7 @@
 
 	.footer{
 		flex-wrap: wrap;
-		flex-direction: row;
+		@include flex-row();
 		justify-content: space-between;
 		margin: 0;
 		padding: 30% 5% 0 5%;
@@ -501,8 +467,7 @@
 			}
 	}
 	.footer{
-		display: flex;
-		flex-direction: row;
+		@include flex-row();
 
 	}
 
@@ -521,8 +486,7 @@
 		padding: 0;
 	}
 	.footer__contenido--display{
-			display: flex;
-			flex-direction: row;
+			@include flex-row();
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: space-evenly;
@@ -536,24 +500,17 @@
 	.footer__titulos--tipografia{
 		font-size: 20px;
 		height: auto;
-		padding: 0%;
-		margin: 0;
+		@include margin-reset();
 
 	}
 
 	/*HOJA PRODUCTO*/
 
 
-		.subindice__actual--tipografia{
-			font-size: 25px;
-		}
-		.subindice__inicio--tipografia{
-			font-size: 16px;
-		}
+
 
 		#catalogo{
-			margin: 0;
-			padding: 0;
+			@include margin-reset();
 		}
 
 		#producto .coleccionLayout{
@@ -565,6 +522,12 @@
 				border: none;
 				width: 50%;
 				
+		}
+			.subindice__actual--tipografia{
+			font-size: 25px;
+		}
+		.subindice__inicio--tipografia{
+			font-size: 16px;
 		}
 }
 
@@ -585,6 +548,13 @@
 		
 
 	}
+
+		.subindice__actual--tipografia{
+			font-size: 25px;
+		}
+		.subindice__inicio--tipografia{
+			font-size: 16px;
+		}
 }
 
 		

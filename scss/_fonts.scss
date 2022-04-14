@@ -1,1 +1,67 @@
 
+
+// Index
+.contenidoSeccionStock {
+			font-family: Bungee Shade;
+			font-size: 50px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 60px;
+			letter-spacing: -0.05em;
+			text-align: center;
+			cursor: pointer;
+		}
+
+/*HOJA PRODUCTO*/
+		
+
+	
+		.producto__descripcion--tipografia{
+			font-family:'Oswald';
+			font-style: normal;
+			font-weight: 300;
+			font-size: 18px;
+			line-height: 25px;
+			align-items: center;
+			text-align: center;
+			letter-spacing: -0.05em;
+			color: $blackProduct;
+
+		}
+
+
+// HOJA INFORMACION
+#informacion main h2, #informacion main article h1{
+	font-family: Ultra;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 25px;
+	letter-spacing: -0.05em;
+
+	color: $blackText;
+}
+
+
+
+
+.títulosInformacion{
+	font-family: Ultra;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 26px;
+	line-height: 25px;
+	letter-spacing: -0.05em;
+
+	color: $blackText;
+}
+
+.formulario h2, .formulario h1, .formulario form legend{
+		
+		@extend .títulosInformacion;
+		font-size: 22px;
+
+	}
+
+
+

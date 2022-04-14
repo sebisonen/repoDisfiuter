@@ -23,34 +23,32 @@
 	}
 
 	.contenidoBotonera{
-		text-decoration: none;
 		color: $blackText;
-		letter-spacing: -0.05em;
 		font-weight: 300;
 		font-size: 16px;
+		text-decoration: none;
+		letter-spacing: -0.05em;
 		line-height: 80px;
-	}
-				#index .contenidoBotonera{
-					font-weight: 350;
+		&:hover{
 					color: rgba(0, 0, 0, 0.9);
-					font-size: 20px;
-				}
-
-				.contenidoBotonera:hover{
-					color: rgba(0, 0, 0, 0.9);
-					/*letter-spacing: -0.05em;*/
 					font-weight: 400;
 					font-size: 18px;
-					line-height: 80px;
 					box-sizing: border-box;
-				}
-				#index .contenidoBotonera:hover{
-					color: navajowhite;
-					transition: 1s;
-					/*letter-spacing: -0.05em;*/
-					font-weight: 400;
-					font-size: 20px;
-					line-height: 80px;
-					box-sizing: border-box;
+		}
+	}
+	#index .contenidoBotonera{
+		font-weight: 350;
+		color: rgba(0, 0, 0, 0.9);
+		font-size: 20px;
+		&:hover{
+			color: navajowhite;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 80px;
+			box-sizing: border-box;
+			transition: 1s;
+		}
+	}			
 
-				}
+				
+				
