@@ -2,29 +2,27 @@
 	margin: 0;
 	padding: 0;
 }
+
 *{	
 	font-family: 'oswald', sans-serif;
 	@include margin-reset();
 	font-size: 16px;
-	
 }
 
 a{
 	@include margin-reset();
-
 }
+
 .correctorVinculos{
 	text-decoration: none;
 }
 
 $pinkDisfiuter: #FFBCD4;
 $blueDisfiuter: #252A54;
-
 $colores:(
 	'primario': #FFBCD4,
 	'secundario': #252A54,
 	'terciario': #FFFFFF,);
-
 
 // para titulos, descripciones e informacion
 $blackText: rgba(0, 0, 0, 0.8);
@@ -35,6 +33,7 @@ $blackProduct: rgba(0, 0, 0, 0.6);
 // textos blancos
 $whiteText: #FFFFFF;
 
+// otros
 @mixin flex-column(){
 	display: flex;
 	flex-direction: column;
@@ -46,12 +45,14 @@ $whiteText: #FFFFFF;
 	flex-direction: row;
 }
 
-
-
-
-
-.borde{
-	border-style: groove;
+// hovers
+#footer a:hover{
+	color: map-get($map:$colores, $key:'terciario');
 }
+#coleccion a:hover{
+	color: $blackText;
+}
+
+
 
 

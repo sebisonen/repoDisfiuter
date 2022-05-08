@@ -3,32 +3,10 @@
 @import "_fonts";
 @import "_navBar";
 @import "_footer";
-@import "_content";
-
-/*cosas generales */
-
-#footer a:hover{
-	color: map-get($map:$colores, $key:'terciario');
-}
-#coleccion a:hover{
-	color: $blackText;
-}
-
-
-
-
-
-
-
-
-
+@import "_mediaqueries";
 
 /*HOJA INDEX*/
-
-
-
-#index { /*fondo*/
-
+#index { 
 	height: auto;
 	overflow-x: none;
 	@include margin-reset();
@@ -36,177 +14,77 @@
 	width: 100%;
 }
 
-
-
-
-
-
-
-
-
-
-
 /* Seccion Stock y A medida */
+#seccionStock {
+	width:  100%;
+	height:  85vh;
+	margin: 10% 0;
+	@include flex-row();
+	background-color: map-get($map:$colores, $key:'primario');
+	box-sizing: border-box;
+}
+.contenedorSeccionStock {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}	
+.colorStock {
+	color: $blackText;
+}
+.colorAmedida {
+	color: rgba(255, 204, 222, 1);
+}
+.fondoStock {
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
+}
+.fondoAmedida {
+	background: linear-gradient(180deg, #252A54 0%, rgba(37, 42, 84, 0) 100%);
+}
 
+/*seccion Coleccion nueva*/ 
 
+#coleccion{
+	padding: 0 15%;
+	box-sizing: border-box;
+	@include flex-column();
+}
 
-
-
-
-	
-	#seccionStock {
-		width:  100%;
-		height:  85vh;
-		margin: 10% 0;
-		@include flex-row();
-		background-color: map-get($map:$colores, $key:'primario');
-		box-sizing: border-box;
-
+.coleccionLayout{
+	@include flex-row();
+	height: auto;
+	box-sizing: border-box;
+}
+.productoContenedor{
+	width: 33%;
+	padding: 4.17%;
+	box-sizing: border-box;
+	&:hover{
+		transition: all 1s;
+		border: none;
+		padding: 0;
 	}
-
-		.contenedorSeccionStock {
-			width: 50%;
-			height: 100%;
-			
-			display: flex;
-			justify-content: center;
-			align-items: center;
-
-		}	
-
-		
-
-		.colorStock {
-			color: $blackText;
-		}
-		.colorAmedida {
-			color: rgba(255, 204, 222, 1);
-		}
-
-		.fondoStock {
-			background: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0) 100%);
-		}
-
-		.fondoAmedida {
-			background: linear-gradient(180deg, #252A54 0%, rgba(37, 42, 84, 0) 100%);
-		}
-
-
-
-
-
-	/*seccion Coleccion nueva*/ 
-
-
-
-
-
-
-
-	#coleccion{
-		padding: 0 15%;
-		box-sizing: border-box;
-		@include flex-column();
-	}
-
-		.coleccion__titulo--tipografia {
-			font-family: Bungee Shade;
-			font-size: 35px;
-			line-height: 31px;
-			text-align: center;
-			color: $blackText;
-		}
-		
-
-
-		.coleccion__descripcion--tipografia {
-			font-family: Oswald;
-			font-weight: 300;
-			font-size: 18px;
-			line-height: 27px;
-			color: $blackText;
-			text-align: center;
-			box-sizing: border-box;		
-			padding: 4.17% 2%;
-		}
-
-
-		.coleccionLayout{
-			@include flex-row();
-			height: auto;
-			box-sizing: border-box;
-
-			
-		}
-		.productoContenedor{
-			width: 33%;
-			padding: 4.17%;
-			box-sizing: border-box;
-			&:hover{
-					transition: all 1s;
-					border: none;
-					padding: 0;
-			}
-		}
+}
 
 /*CLASES REPETIDAS EN HOJA PRODUCTOS*/
-
-		#producto .coleccionLayout{
-			flex-wrap: wrap;
-			width: 66.67%;
-			height: auto;
-			margin: 29px 16.665% 15% ;
-		}
-
-		#producto #catalogo .productoContenedor{
-
-				/*border: 1px solid rgba(0, 0, 0, 0.8);*/
-			
-		}
-
-		.tamañoFoto{
-			display: block;
-			width: 100%;
-			height: 315px;
-			object-fit: cover;
-		}
-		
-		#catalogo{
-			margin: 0 0 15% 0;
-		}
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#producto .coleccionLayout{
+	flex-wrap: wrap;
+	width: 66.67%;
+	height: auto;
+	margin: 29px 16.665% 15% ;
+}
+.tamañoFoto{
+	display: block;
+	width: 100%;
+	height: 315px;
+	object-fit: cover;
+}
+#catalogo{
+	margin: 0 0 15% 0;
+}
 
 /*HOJA PRODUCTO*/
-
-
-
-
-
-
 #producto{
 	width: 100%;
 	height: auto;
@@ -214,351 +92,36 @@
 	@include margin-reset();
 	background-color: map-get($map:$colores, $key:'terciario');
 }
-		.subindiceMargenes{
-			width: 66.67%;
-			height: 40px;
-			text-align: left;
-			justify-content: center ;
-			align-items: center;
-			align-content: center;
-			border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-			margin: 29px 16.665%;
-		}
-
-		.subindice__inicio--tipografia{
-			font-family: Ultra;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 18px;
-			line-height: 0px;
-			letter-spacing: -0.05em;
-			color: $blackText;
-			text-decoration: none;
-
-			box-sizing: border-box;
-
-		
-		}
-		.subindice__actual--tipografia{
-			font-family: Ultra;
-			font-style: normal;
-			font-weight: normal;
-			font-size: 40px;
-			line-height: 0px;
-			letter-spacing: -0.05em;
-			color: $blackText;
-		}
-
-
-
-
-
-
-
-
-
+.subindiceMargenes{
+	width: 66.67%;
+	height: 40px;
+	text-align: left;
+	justify-content: center ;
+	align-items: center;
+	align-content: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+	margin: 29px 16.665%;
+}
 
 /*Hoja informacion*/
-
-
-
-
-
-
-
-	#informacion main article, ul{
-		margin: 30px 16.665%;
-	}
-
-	#informacion main article p, h3, ul{
-		margin: 15px;
-	}
-
-
-
+#informacion main article, ul{
+	margin: 30px 16.665%;
+}
+#informacion main article p, h3, ul{
+	margin: 15px;
+}
 
 /*Hoja encargos*/
-
-
-
-
-
-
-
-	.formulario form, .formulario h2, .formulario p, .formulario h1{
-		margin: 30px 16.665%;
-
-	}
-
-
-
-	
-
-	fieldset{
-		margin: 10px 0;
-		border-radius: 10px;
-		
-	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-						/*Media Queries*/
-
-@media (min-width: 1px) and (max-width: 991.99px){
-	.indexLayout{
-		grid-template-rows: 2fr 2fr 2fr 2fr;
-		grid-row-gap: 0;
-
-	}
-
-
-	#header{
-		justify-content: stretch;
-	}
-	.botonera{
-		width: 50%;
-	}
-	.contenedorSlider{
-		width: 100%;
-	}
-	.logo{
-		font-size: 30px;
-	}
-	.slider{
-		width: 100%;
-	}
-	.contenidoSeccionStock {
-		font-size: 40px;
-
-	}
-
-	#coleccion{
-		padding: 0;
-	}
-
-	.footer{
-		flex-wrap: wrap;
-		@include flex-row();
-		justify-content: space-between;
-		margin: 0;
-		padding: 30% 5% 0 5%;
-		width: auto;
-	}
-	.footer__categorias--display{
-		width:auto;
-		
-		margin: 0 0 5% 0;
-
-	}
-		.footerBackgroundIndex{
-		height: auto;
-		width: 100wh;
-	}
-	#footer{
-		height: auto;
-	}
-
-
-	.subindiceMargenes{
-		width: 90%;
-		height: 40px;
-		text-align: left;
-		justify-content: center ;
-		align-items: center;
-		align-content: center;
-		border-bottom: 1px solid rgba(0, 0, 0, 0.8);
-		margin: 29px 5%;
-	}
-
-	#producto .coleccionLayout{
-		width: 90%;
-		height: auto;
-		margin: 29px 5%;
-	}
+.formulario form, .formulario h2, .formulario p, .formulario h1{
+	margin: 30px 16.665%;
 }
-
-
-
-
-
-
-
-
-@media (min-device-width: 1px) and (max-device-width: 991.99px){
-
-
-
-			
-	/*seccion stock*/
-	.contenidoSeccionStock{
-		margin: 0;
+.backgroundFormsPink{
+	background: radial-gradient(33.71% 47.64% at 50% 50%, #FFBCD4 0%, rgba(255, 188, 212, 0) 100%);
 	}
-
-	.contenidoSeccionStock {
-		font-size: 30px;
-
-		margin: 0;
-	
-	}
-
-	/*coleccion*/
-
-	.coleccion__titulo--tipografia{
-		font-size: 30px;
-		padding: 0 20%;
-	}
-
-	.coleccion__descripcion--tipografia{
-		font-size: 16px;
-		height: auto;
-		padding: 5% 5%;
-		
-	}
-
-
-
-		#index .productoContenedor{
-			padding: 0 2%;
-			
-		}
-
-		#index .coleccionLayout{
-				padding: 0 5%;
-			}
-
-		#index .tamañoFoto{
-
-			height: 80%;
-
-		}
-
-
-
-		#index .producto__descripcion--layout{
-			display: flex;
-			flex-direction: column;
-			justify-content: baseline;
-			height: 20%;
-			
-			box-sizing: border-box;
-		}
-
-
-	#footer{
-		height: auto;
-		margin: 10vh 0 0 0;
-		padding: 0 5%;
-		box-sizing: border-box;
-			p{
-				width: 50%;
-				margin: 3% 0;
-			}
-	}
-	.footer{
-		@include flex-row();
-
-	}
-
-	.footerBackgroundIndex{
-		height: 100%;
-		width: 100wh;
-	}
-
-	.footer__categorias--display{
-		display: flex;
-		flex-direction: column;
-		align-content: flex-start;
-		width: 100%;
-		box-sizing: border-box;
-		margin-bottom: 2%;
-		padding: 0;
-	}
-	.footer__contenido--display{
-			@include flex-row();
-			flex-wrap: wrap;
-			justify-content: space-between;
-			align-items: space-evenly;
-			font-size: 19px;
-			padding: 0;
-			box-sizing: border-box;
-			/*height: fit-contents;	*/
-
-	}
-
-	.footer__titulos--tipografia{
-		font-size: 20px;
-		height: auto;
-		@include margin-reset();
-
-	}
-
-	/*HOJA PRODUCTO*/
-
-
-
-
-		#catalogo{
-			@include margin-reset();
-		}
-
-		#producto .coleccionLayout{
-			width: 80%;
-			height: auto;
-			margin: 29px 10%;
-		}
-		#producto #catalogo .productoContenedor{
-				border: none;
-				width: 50%;
-				
-		}
-			.subindice__actual--tipografia{
-			font-size: 25px;
-		}
-		.subindice__inicio--tipografia{
-			font-size: 16px;
-		}
+.backgroundFormsBlue{
+	background: radial-gradient(33.71% 47.64% at 50% 50%, #BCBFFF 0%, rgba(255, 188, 240, 0) 74.88%);
 }
-
-
-
-.tamañoLogoBootstrap{
-	height: auto;
-	width: 200px;
-
+fieldset{
+	margin: 10px 0;
+	border-radius: 10px;
 }
-.botoneraBootstrap{
-	display: grid;
-}
-
-@media (min-width: 280px) and (max-width: 576px){
-	.tamañoLogoBootstrap{
-		width: 100px;
-		
-
-	}
-
-		.subindice__actual--tipografia{
-			font-size: 25px;
-		}
-		.subindice__inicio--tipografia{
-			font-size: 16px;
-		}
-}
-
-		
-
-
-
-

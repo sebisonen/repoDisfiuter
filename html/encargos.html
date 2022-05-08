@@ -57,115 +57,157 @@
 	<main class="formulario">
 		<h1>Encarga acá!</h1>
 		<p>El tiempo de confección de la prenda es de 10 a 15 días desde el pago de la seña</p>
-		<form action="envio.php" mehtod="post">
-			<fieldset>
-					<legend>Nombre completo</legend>
-					<label for="nombre">Nombre</label>
-					<input type="text" id="nombre" placeholder="Bruno"name="nombre" id="nombre">
-				<br>
-				<label for="apellido">Apellido</label>
-				<input type="text" id="apellido" placeholder="Diaz" name="apellido" id="apellido">
-			</fieldset>
-			<fieldset>
-				<legend>Contacto</legend>
-				<label for="celular">Celular</label>
-				<input type="tel" placeholder="(+54)1122334455" name="celular" id="celular">
-				<br>
-				<label for="email">Email</label>
-				<input type="email"placeholder="acava@tumail.com" name=email id="email">
-			</fieldset>
-			<fieldset>
-				<legend>Productos</legend>
-				<label for="body waterdragon">Body WaterDragon</label>
-				<input type="checkbox" name="body waterdragon" id="body waterDragon" value="body waterdragon">
-				<br>
-				<label for="talle body waterdragon">Talle</label>
-				<select name="talle body waterdragon" id="talle body waterdragon">
-					<option value=""></option>
-					<option value="talle 1">1</option>
-					<option value="talle 2">2</option>
-					<option value="talle 3">3</option>
-					<option value="talle 4">4</option>
-					<option value="talle 5">5</option>
-				</select>
-				<label for="cantidad body waterdragon">Cantidad</label>
-				<select name="catidad body waterdragon" id="cantidad body waterdragon">
-					<option value=""></option>
-					<option value="cantidad 1">1</option>
-					<option value="cantidad 2">2</option>
-					<option value="cantidad 3">3</option>
-					<option value="cantidad 4">4</option>
-					<option value="cantidad 5">5</option>
-				</select>
-				<br>
-				<label for="top moondragon">Top MoonDragon</label>
-				<input type="checkbox" name="top moondragon" id="top moondragon" value="top moondragon">
-				<br>
-				<label for="talle top moondragon">Talle</label>
-				<select name="talle top moondragon" id="talle top moondragon">
-					<option value=""></option>
-					<option value="talle 1">1</option>
-					<option value="talle 2">2</option>
-					<option value="talle 3">3</option>
-					<option value="talle 4">4</option>
-					<option value="talle 5">5</option>
-				</select>
-				<label for="cantidad top moondragon">Cantidad</label>
-				<select name="catidad top moondragon" id="cantidad top moondragon">
-					<option value=""></option>
-					<option value="cantidad 1">1</option>
-					<option value="cantidad 2">2</option>
-					<option value="cantidad 3">3</option>
-					<option value="cantidad 4">4</option>
-					<option value="cantidad 5">5</option>
-				</select>
-				<br>
-				<label for="polo sunchaser">Polo Sunchaser</label>
-				<input type="checkbox" name="polo sunchaser" id="polo sunchaser" value="polo sunchaser">
-				<br>
-				<label for="talle polo sunchaser">Talle</label>
-				<select name="talle polo sunchaser" id="talle polo sunchaser">
-					<option value=""></option>
-					<option value="talle 1">1</option>
-					<option value="talle 2">2</option>
-					<option value="talle 3">3</option>
-					<option value="talle 4">4</option>
-					<option value="talle 5">5</option>
-				</select>
-				<label for="cantidad polo sunchaser">Cantidad</label>
-				<select name="catidad polo sunchaser" id="cantidad polo sunchaser">
-					<option value=""></option>				
-					<option value="cantidad 1">1</option>
-					<option value="cantidad 2">2</option>
-					<option value="cantidad 3">3</option>
-					<option value="cantidad 4">4</option>
-					<option value="cantidad 5">5</option>
-				</select>						
-			</fieldset>
-			<fieldset>
-				<legend>Envío</legend>
-					<label for="envio">Retiro por local</label>
-					<input type="radio" name="envio" id="local" value="local">
-					<label for="envio">Envio a domicilio</label>
-					<input type="radio" name="envio" id="domicilio" value="local">
-					<br>
-					<select name="localidad" id="localidad">
-						<option value="caba">CABA</option>
-						<option value="baires">Buenos Aires</option>
-						<option value="interior">Interior</option>
-					</select>
-					<label for="direccion">Direccion</label>
-					<input type="text" name="direccion" id="direccion" placeholder="Calle y numero">
-					<label for="piso">Piso/timbre</label>
-					<input type="text" name=piso id=piso placeholder="4b">	 
-			</fieldset>
-			<fieldset>
-				<legend>Dejanos un mensaje (opcional)</legend>
-					<label for="menaje"></label> <br>
-					<textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
-			</fieldset>
-			<input type="submit" value="Enviar">
-			<input type="reset" value="Cancelar">
+		<form action="error.html" mehtod="post" class="border border-1 border-dark">
+			<div class="backgroundFormsPink">
+			
+				<fieldset class="m-3">
+					<legend class="text-center my-4">Nombre completo</legend>
+					<div class=" d-md-flex flex-md-row justify-content-md-evenly">
+						<div class="text-center">
+							<label for="nombre" class="m-3 ">Nombre</label>
+							<input type="text" id="nombre" placeholder="Bruno"name="nombre" id="nombre" >
+						</div>
+						<div class="text-center">
+							<label for="apellido" class="m-3">Apellido</label>
+							<input type="text" id="apellido" placeholder="Diaz" name="apellido" id="apellido">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="m-3">
+					<legend class="text-center my-4">Contacto</legend>
+					<div class=" d-md-flex flex-md-row justify-content-md-evenly">
+						<div class="text-center">
+							<label for="celular" class="m-3">Celular</label>
+							<input type="tel" placeholder="(+54)1122334455" name="celular" id="celular">
+						</div>
+						<div class="text-center">
+							<label for="email" class="m-3">Email</label>
+							<input type="email"placeholder="acava@tumail.com" name=email id="email">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="m-3">
+					<legend class="text-center my-4">Productos</legend>
+					<div class="d-flex flex-column align-items-center flex-md-row justify-content-md-around my-4">
+						<div class="my-2 my-md-0">
+							<label for="body waterdragon">Body WaterDragon</label>
+							<input type="checkbox" name="body waterdragon" id="body waterDragon" value="body waterdragon">
+						</div>
+						<div class="my-2 my-md-0">
+							<label for="talle body waterdragon">Talle</label>
+							<select name="talle body waterdragon" id="talle body waterdragon">
+								<option value=""></option>
+								<option value="talle 1">1</option>
+								<option value="talle 2">2</option>
+								<option value="talle 3">3</option>
+								<option value="talle 4">4</option>
+								<option value="talle 5">5</option>
+							</select>
+						</div>
+						<div class="my-2 my-md-0">	
+							<label for="cantidad body waterdragon">Cantidad</label>
+							<select name="catidad body waterdragon" id="cantidad body waterdragon">
+								<option value=""></option>
+								<option value="cantidad 1">1</option>
+								<option value="cantidad 2">2</option>
+								<option value="cantidad 3">3</option>
+								<option value="cantidad 4">4</option>
+								<option value="cantidad 5">5</option>
+							</select>
+						</div>	
+					</div>
+					<div class="d-flex flex-column align-items-center flex-md-row justify-content-md-around my-4">
+						<div class="my-2 my-md-0">
+							<label for="top moondragon">Top MoonDragon</label>
+							<input type="checkbox" name="top moondragon" id="top moondragon" value="top moondragon">
+						</div>
+						<div class="my-2 my-md-0">
+							<label for="talle top moondragon">Talle</label>
+							<select name="talle top moondragon" id="talle top moondragon">
+								<option value=""></option>
+								<option value="talle 1">1</option>
+								<option value="talle 2">2</option>
+								<option value="talle 3">3</option>
+								<option value="talle 4">4</option>
+								<option value="talle 5">5</option>
+							</select>
+						</div>
+						<div class="my-2 my-md-0">	
+							<label for="cantidad top moondragon">Cantidad</label>
+							<select name="catidad top moondragon" id="cantidad top moondragon">
+								<option value=""></option>
+								<option value="cantidad 1">1</option>
+								<option value="cantidad 2">2</option>
+								<option value="cantidad 3">3</option>
+								<option value="cantidad 4">4</option>
+								<option value="cantidad 5">5</option>
+							</select>
+						</div>	
+					</div>
+					<div class="d-flex flex-column align-items-center flex-md-row justify-content-md-around my-4">
+						<div class="my-2 my-md-0">
+							<label for="polo sunchaser">Polo Sunchaser</label>
+							<input type="checkbox" name="polo sunchaser" id="polo sunchaser" value="polo sunchaser">
+						</div>
+						<div class="my-2 my-md-0">
+							<label for="talle polo sunchaser">Talle</label>
+							<select name="talle polo sunchaser" id="talle polo sunchaser">
+								<option value=""></option>
+								<option value="talle 1">1</option>
+								<option value="talle 2">2</option>
+								<option value="talle 3">3</option>
+								<option value="talle 4">4</option>
+								<option value="talle 5">5</option>
+							</select>
+						</div>
+						<div class="my-2 my-md-0">	
+							<label for="cantidad polo sunchaser">Cantidad</label>
+							<select name="catidad polo sunchaser" id="cantidad polo sunchaser">
+								<option value=""></option>				
+								<option value="cantidad 1">1</option>
+								<option value="cantidad 2">2</option>
+								<option value="cantidad 3">3</option>
+								<option value="cantidad 4">4</option>
+								<option value="cantidad 5">5</option>
+							</select>
+						</div>	
+					</div>						
+				</fieldset>
+			</div>
+			<div class="backgroundFormsBlue">
+				<fieldset class="m-3 px-4 d-flex flex-column align-items-between">
+					<legend class="text-center my-4">Envío</legend>
+					<div class="px-4">
+						<label for="envio">Envio a domicilio</label>
+						<input type="radio" name="envio" id="domicilio" value="local">
+					</div>
+					<div class="my-4 px-4 d-flex flex-column flex-md-row justify-content-around">
+						<label for="localidad" class="my-md-0 my-2">Localidad</label>
+						<select name="localidad" id="localidad" class=" mx-2 container-fluid" >
+							<option value="caba">CABA</option>
+							<option value="baires">Buenos Aires</option>
+							<option value="interior">Interior</option>
+						</select>
+						<label for="direccion" class="my-md-0 my-2">Direccion</label>
+						<input type="text" name="direccion" id="direccion" placeholder="Calle y numero" class=" mx-2 container-fluid">
+						<label for="piso" class="my-md-0 my-2">Piso/timbre</label>
+						<input type="text" name=piso id=piso placeholder="4b" class=" mx-2 container-fluid">	 
+					</div>
+					<div class="px-4">
+						<label for="envio">Retiro por Showroom</label>
+						<input type="radio" name="envio" id="local" value="local">
+					</div>
+				</fieldset>
+				<fieldset>
+					<legend class="text-center my-4">Dejanos un mensaje</legend>
+					<label for="mensaje"></label>
+					<textarea name="mensaje" id="mensaje" cols="30" rows="10" class="w-100"></textarea>
+				</fieldset>
+				<input type="submit" value="Enviar">
+				<input type="reset" value="Cancelar">
+			</div>	
 		</form>
 	</main>	
 
@@ -217,8 +259,5 @@
 		</div>		
 	</footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-	
-
-	
 </body>
 </html>

@@ -17,9 +17,9 @@
 
 	  <div class="container-fluid d-flex flex-md-column  justify-content-start">
 	  		<div class="w-25 ">
-	  		<button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  			<button class="navbar-toggler " type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
      				 <span class="navbar-toggler-icon"></span>
-   			</button>
+   				</button>
 	  		</div>
 	  		<a class="navbar-brand pt-4 text-center w-50 align-self-center text-center" href="../index.html"><img src="../fotos/logoSecundario.svg" alt="logo de disfiuter" width="auto" height="90"></a>
 
@@ -55,27 +55,41 @@
 	</div>
 
 	<main class="formulario">
-		<form action="envio.php" mehtod="post">
+		<form action="error.html" mehtod="post" class="border border-1 border-dark">
+			<div class="backgroundFormsPink">
+				<fieldset class="my-3 d-flex flex-column">
+					<legend class="text-center my-4">Nombre completo</legend>
+					<div class=" d-md-flex flex-md-row justify-content-md-evenly">
+						<div class="text-center">
+							<label for="nombre" class="m-3 ">Nombre</label>
+							<input type="text" id="nombre" placeholder="Bruno"name="nombre" id="nombre" >
+						</div>
+						<div class="text-center">
+							<label for="apellido" class="m-3">Apellido</label>
+							<input type="text" id="apellido" placeholder="Diaz" name="apellido" id="apellido">
+						</div>
+					</div>
+				</fieldset>
+
+				<fieldset class="m-3 d-flex flex-column">
+					<legend class="text-center my-4">Contacto</legend>
+					<div class=" d-md-flex flex-md-row justify-content-md-evenly">
+						<div class="text-center">
+							<label for="celular" class="m-3">Celular</label>
+							<input type="tel" placeholder="(+54)1122334455" name="celular" id="celular">
+						</div>
+						<div class="text-center">
+							<label for="email" class="m-3">Email</label>
+							<input type="email"placeholder="acava@tumail.com" name=email id="email">
+						</div>
+					</div>
+				</fieldset>
+			</div>
+
 			<fieldset>
-				<legend>Nombre completo</legend>
-				<label for="nombre">Nombre</label>
-				<input type="text" id="nombre" placeholder="Bruno"name="nombre" id="nombre">
-				<br>
-				<label for="apellido">Apellido</label>
-				<input type="text" id="apellido" placeholder="Diaz" name="apellido" id="apellido">
-			</fieldset>
-			<fieldset>
-				<legend>Contacto</legend>
-				<label for="celular">Celular</label>
-				<input type="tel" placeholder="(+54)1122334455" name="celular" id="celular">
-				<br>
-				<label for="email">Email</label>
-				<input type="email"placeholder="acava@tumail.com" name=email id="email">
-			</fieldset>
-			<fieldset>
-				<legend>Dejanos un mensaje</legend>
-				<label for="menaje"></label> <br>
-				<textarea name="mensaje" id="mensaje" cols="30" rows="10"></textarea>
+				<legend class="text-center my-4">Dejanos un mensaje</legend>
+				<label for="mensaje"></label>
+				<textarea name="mensaje" id="mensaje" cols="30" rows="10" class="w-100"></textarea>
 			</fieldset>
 			<input type="submit" value="Enviar">
 			<input type="reset" value="Cancelar">
